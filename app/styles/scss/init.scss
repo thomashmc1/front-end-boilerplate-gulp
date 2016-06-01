@@ -1,4 +1,8 @@
-main-container {
-  width:328px;
-  height:400px;
+body {
+	margin: 0;
+	padding: 0;
+}
+.gmap-container {
+	min-width: 320px;
+	min-height: 200px;
 }

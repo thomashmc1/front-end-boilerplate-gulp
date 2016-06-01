@@ -13,11 +13,13 @@ var App = window.App || {};
   // Each marker is labeled with a single alphabetical character.
 
   function initialize(plugPoints) {
-
+  	console.log(plugPoints);
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 14,
       center: plugPoints[0]
     });
+
+    console.log(map);
 
     // This event listener calls addMarker() when the map is clicked.
     google.maps.event.addListener(map, 'click', function(event) {
@@ -99,7 +101,6 @@ var App = window.App || {};
   }
 
   function processData(rawData) {
-    console.log(rawData);
     var plugPoints = [];
     rawData.pois.forEach(function(ele, index) {
       plugPoints.push({ lat: ele.latitude, lng: ele.longitude })

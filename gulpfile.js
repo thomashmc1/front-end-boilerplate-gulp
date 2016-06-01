@@ -40,7 +40,7 @@ gulp.task('images', function(tmp) {
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
         .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-        .pipe(gulp.dest('app/images'));
+        .pipe(gulp.dest('dist/images'));
 });
 
 //compressing images & handle SVG files
